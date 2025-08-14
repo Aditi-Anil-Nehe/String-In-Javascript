@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Word Extractor</title>
+</head>
+<body>
+    <h3>Extract the First Word of a Sentence</h3>
+    <input type="text" id="sentence" placeholder="Enter a sentence">
+    <button onclick="getFirstWord()">Get First Word</button>
+
+    <p id="result"></p>
+
+    <script>
+        function getFirstWord() {
+            let sentence = document.getElementById("sentence").value.trim();
+            
+            if (sentence.length === 0) {
+                document.getElementById("result").innerText = "Please enter a sentence.";
+                return;
+            }
+
+            let firstWord = sentence.split(" ")[0];
+            document.getElementById("result").innerText = "First word: " + firstWord;
+        }
+    </script>
+</body>
+</html>
